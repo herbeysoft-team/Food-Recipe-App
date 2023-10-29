@@ -1,12 +1,13 @@
 import { View, Text, Image } from "react-native";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
+import {FONTS} from '../constant/theme';
+import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
+import { useNavigation } from "@react-navigation/native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
-import { useNavigation } from "@react-navigation/native";
 
 export default function SplashScreen() {
   const ring1padding = useSharedValue(0);
@@ -51,10 +52,10 @@ export default function SplashScreen() {
       {/* title and punchline */}
       <View className="flex items-center space-y-2">
         <Text
-          style={{ fontSize: hp(9) }}
+          style={{ fontSize: hp(9)}}
           className="font-bold text-white tracking-widest"
         >
-          All-Days
+          Eat It
         </Text>
         <Text
           style={{ fontSize: hp(3) }}
